@@ -1,0 +1,1077 @@
+2023-03-04 16:07:46,973 INFO: Training with 
+{   'CHINESE_DIR': './data/chineseEMR',
+    'DATA_DIR': './data',
+    'LOG_DIR': './results/log/',
+    'MAX_LENGTH': 4000,
+    'MIMIC_3_DIR': './data/mimic3',
+    'MODEL_DIR': './results/models',
+    'PLM': 0,
+    'batch_size': 32,
+    'class_nums': 50,
+    'command': 'python /home/Data/wanghaotian/MSLAN_ACG/main.py',
+    'conv_layer': 2,
+    'criterion': 'f1_micro',
+    'dev_path': './data/mimic3/dev_50.csv',
+    'dropout': 0.3,
+    'embed_file': './data/mimic3/processed_full.embed',
+    'embed_size': 100,
+    'entity_num': 0,
+    'excel_path': './results/mimic3_result.xls',
+    'filter_size': '3,5,9',
+    'gpu': 2,
+    'graph_embed_file': './data/mimic3/processed_full_ent_new.embed',
+    'graph_path': './data/mimic3/graph_mimic3-50_co-occur-100_.npy',
+    'graph_vocab_path': './data/mimic3/graph_vocab.csv',
+    'label_path': './data/mimic3/TOP_50_CODES.csv',
+    'lr': 0.001,
+    'model_name': 'MVCLA_ACG',
+    'n_epochs': 500,
+    'num_filter_maps': 100,
+    'patience': 10,
+    'random_seed': 1,
+    'test_model': None,
+    'test_path': './data/mimic3/test_50.csv',
+    'train_path': './data/mimic3/train_50.csv',
+    'tune_wordemb': False,
+    'use_word': True,
+    'version': 'mimic3',
+    'vocab_path': './data/mimic3/vocab.csv',
+    'weight_decay': 0}
+ 
+2023-03-04 16:07:46,973 INFO: Load label and vocab... 
+2023-03-04 16:07:47,030 INFO: Load graph... 
+2023-03-04 16:07:55,220 INFO: Load dataset ./data/mimic3/train_50.csv ... 
+2023-03-04 16:08:01,619 INFO: Load dataset ./data/mimic3/dev_50.csv ... 
+2023-03-04 16:08:03,198 INFO: Load dataset ./data/mimic3/test_50.csv ... 
+2023-03-04 16:08:04,775 INFO: Epoch 0 
+2023-03-04 16:08:38,445 INFO: epoch finish in train dataset, time: 33.67s, loss: 0.4238 
+2023-03-04 16:08:38,445 INFO: file for evaluation: dev 
+2023-03-04 16:08:50,473 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:08:50,473 INFO:         0.1340,   0.2592,    0.1955, 0.2229,    0.7669 
+2023-03-04 16:08:50,473 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:08:50,473 INFO:         0.2259,   0.5827,    0.2695, 0.3686,    0.8032 
+2023-03-04 16:08:50,473 INFO: rec_at_1: 0.1290 
+2023-03-04 16:08:50,474 INFO: prec_at_1: 0.6306 
+2023-03-04 16:08:50,474 INFO: rec_at_5: 0.3727 
+2023-03-04 16:08:50,474 INFO: prec_at_5: 0.4086 
+2023-03-04 16:08:50,474 INFO: rec_at_8: 0.4922 
+2023-03-04 16:08:50,474 INFO: prec_at_8: 0.3450 
+2023-03-04 16:08:50,474 INFO: evaluation finish in dev dataset, time: 12.03s 
+2023-03-04 16:08:50,543 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:08:50,543 INFO: Epoch 1 
+2023-03-04 16:09:10,405 INFO: epoch finish in train dataset, time: 19.86s, loss: 0.3852 
+2023-03-04 16:09:10,406 INFO: file for evaluation: dev 
+2023-03-04 16:09:16,950 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:09:16,950 INFO:         0.2365,   0.4010,    0.3178, 0.3546,    0.8337 
+2023-03-04 16:09:16,950 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:09:16,950 INFO:         0.3344,   0.6391,    0.4123, 0.5012,    0.8716 
+2023-03-04 16:09:16,950 INFO: rec_at_1: 0.1710 
+2023-03-04 16:09:16,950 INFO: prec_at_1: 0.7533 
+2023-03-04 16:09:16,950 INFO: rec_at_5: 0.4943 
+2023-03-04 16:09:16,950 INFO: prec_at_5: 0.5179 
+2023-03-04 16:09:16,950 INFO: rec_at_8: 0.6167 
+2023-03-04 16:09:16,950 INFO: prec_at_8: 0.4171 
+2023-03-04 16:09:16,950 INFO: evaluation finish in dev dataset, time: 6.54s 
+2023-03-04 16:09:17,171 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:09:17,172 INFO: Epoch 2 
+2023-03-04 16:09:34,251 INFO: epoch finish in train dataset, time: 17.08s, loss: 0.3718 
+2023-03-04 16:09:34,251 INFO: file for evaluation: dev 
+2023-03-04 16:09:40,841 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:09:40,842 INFO:         0.2955,   0.4516,    0.4580, 0.4547,    0.8580 
+2023-03-04 16:09:40,842 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:09:40,842 INFO:         0.3887,   0.5628,    0.5569, 0.5598,    0.8844 
+2023-03-04 16:09:40,842 INFO: rec_at_1: 0.1798 
+2023-03-04 16:09:40,842 INFO: prec_at_1: 0.7851 
+2023-03-04 16:09:40,842 INFO: rec_at_5: 0.5199 
+2023-03-04 16:09:40,842 INFO: prec_at_5: 0.5429 
+2023-03-04 16:09:40,842 INFO: rec_at_8: 0.6404 
+2023-03-04 16:09:40,842 INFO: prec_at_8: 0.4370 
+2023-03-04 16:09:40,842 INFO: evaluation finish in dev dataset, time: 6.59s 
+2023-03-04 16:09:41,001 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:09:41,002 INFO: Epoch 3 
+2023-03-04 16:09:58,146 INFO: epoch finish in train dataset, time: 17.14s, loss: 0.3651 
+2023-03-04 16:09:58,147 INFO: file for evaluation: dev 
+2023-03-04 16:10:05,054 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:10:05,055 INFO:         0.3316,   0.4868,    0.4800, 0.4834,    0.8750 
+2023-03-04 16:10:05,055 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:10:05,055 INFO:         0.4096,   0.6119,    0.5534, 0.5812,    0.9003 
+2023-03-04 16:10:05,055 INFO: rec_at_1: 0.1906 
+2023-03-04 16:10:05,055 INFO: prec_at_1: 0.8055 
+2023-03-04 16:10:05,055 INFO: rec_at_5: 0.5484 
+2023-03-04 16:10:05,055 INFO: prec_at_5: 0.5663 
+2023-03-04 16:10:05,055 INFO: rec_at_8: 0.6801 
+2023-03-04 16:10:05,055 INFO: prec_at_8: 0.4616 
+2023-03-04 16:10:05,055 INFO: evaluation finish in dev dataset, time: 6.91s 
+2023-03-04 16:10:05,277 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:10:05,277 INFO: Epoch 4 
+2023-03-04 16:10:21,208 INFO: epoch finish in train dataset, time: 15.93s, loss: 0.3586 
+2023-03-04 16:10:21,208 INFO: file for evaluation: dev 
+2023-03-04 16:10:27,971 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:10:27,972 INFO:         0.3632,   0.5526,    0.5071, 0.5289,    0.8836 
+2023-03-04 16:10:27,972 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:10:27,972 INFO:         0.4418,   0.6370,    0.5904, 0.6128,    0.9075 
+2023-03-04 16:10:27,972 INFO: rec_at_1: 0.1910 
+2023-03-04 16:10:27,972 INFO: prec_at_1: 0.8169 
+2023-03-04 16:10:27,972 INFO: rec_at_5: 0.5739 
+2023-03-04 16:10:27,972 INFO: prec_at_5: 0.5872 
+2023-03-04 16:10:27,972 INFO: rec_at_8: 0.7078 
+2023-03-04 16:10:27,972 INFO: prec_at_8: 0.4780 
+2023-03-04 16:10:27,972 INFO: evaluation finish in dev dataset, time: 6.76s 
+2023-03-04 16:10:28,191 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:10:28,191 INFO: Epoch 5 
+2023-03-04 16:10:43,354 INFO: epoch finish in train dataset, time: 15.16s, loss: 0.3539 
+2023-03-04 16:10:43,354 INFO: file for evaluation: dev 
+2023-03-04 16:10:51,793 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:10:51,793 INFO:         0.3965,   0.5627,    0.5311, 0.5464,    0.8909 
+2023-03-04 16:10:51,793 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:10:51,793 INFO:         0.4697,   0.6687,    0.6121, 0.6391,    0.9176 
+2023-03-04 16:10:51,793 INFO: rec_at_1: 0.1946 
+2023-03-04 16:10:51,793 INFO: prec_at_1: 0.8284 
+2023-03-04 16:10:51,793 INFO: rec_at_5: 0.6078 
+2023-03-04 16:10:51,793 INFO: prec_at_5: 0.6139 
+2023-03-04 16:10:51,793 INFO: rec_at_8: 0.7396 
+2023-03-04 16:10:51,793 INFO: prec_at_8: 0.4946 
+2023-03-04 16:10:51,793 INFO: evaluation finish in dev dataset, time: 8.44s 
+2023-03-04 16:10:51,939 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:10:51,940 INFO: Epoch 6 
+2023-03-04 16:11:06,386 INFO: epoch finish in train dataset, time: 14.45s, loss: 0.3498 
+2023-03-04 16:11:06,386 INFO: file for evaluation: dev 
+2023-03-04 16:11:15,142 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:11:15,142 INFO:         0.4042,   0.5787,    0.5609, 0.5697,    0.8949 
+2023-03-04 16:11:15,142 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:11:15,143 INFO:         0.4609,   0.6347,    0.6273, 0.6309,    0.9207 
+2023-03-04 16:11:15,143 INFO: rec_at_1: 0.1875 
+2023-03-04 16:11:15,143 INFO: prec_at_1: 0.8036 
+2023-03-04 16:11:15,143 INFO: rec_at_5: 0.5986 
+2023-03-04 16:11:15,143 INFO: prec_at_5: 0.6047 
+2023-03-04 16:11:15,143 INFO: rec_at_8: 0.7405 
+2023-03-04 16:11:15,143 INFO: prec_at_8: 0.4946 
+2023-03-04 16:11:15,143 INFO: evaluation finish in dev dataset, time: 8.76s 
+2023-03-04 16:11:15,144 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:11:15,144 INFO: Epoch 7 
+2023-03-04 16:11:29,421 INFO: epoch finish in train dataset, time: 14.28s, loss: 0.3482 
+2023-03-04 16:11:29,421 INFO: file for evaluation: dev 
+2023-03-04 16:11:35,910 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:11:35,911 INFO:         0.4121,   0.5898,    0.5821, 0.5859,    0.9003 
+2023-03-04 16:11:35,911 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:11:35,911 INFO:         0.4734,   0.6385,    0.6468, 0.6426,    0.9242 
+2023-03-04 16:11:35,911 INFO: rec_at_1: 0.1927 
+2023-03-04 16:11:35,911 INFO: prec_at_1: 0.8226 
+2023-03-04 16:11:35,911 INFO: rec_at_5: 0.6050 
+2023-03-04 16:11:35,911 INFO: prec_at_5: 0.6104 
+2023-03-04 16:11:35,911 INFO: rec_at_8: 0.7400 
+2023-03-04 16:11:35,911 INFO: prec_at_8: 0.4964 
+2023-03-04 16:11:35,911 INFO: evaluation finish in dev dataset, time: 6.49s 
+2023-03-04 16:11:36,131 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:11:36,131 INFO: Epoch 8 
+2023-03-04 16:11:50,467 INFO: epoch finish in train dataset, time: 14.34s, loss: 0.3456 
+2023-03-04 16:11:50,467 INFO: file for evaluation: dev 
+2023-03-04 16:11:56,886 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:11:56,886 INFO:         0.4272,   0.6037,    0.5945, 0.5991,    0.9042 
+2023-03-04 16:11:56,887 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:11:56,887 INFO:         0.4913,   0.6514,    0.6666, 0.6589,    0.9280 
+2023-03-04 16:11:56,887 INFO: rec_at_1: 0.1989 
+2023-03-04 16:11:56,887 INFO: prec_at_1: 0.8284 
+2023-03-04 16:11:56,887 INFO: rec_at_5: 0.6217 
+2023-03-04 16:11:56,887 INFO: prec_at_5: 0.6247 
+2023-03-04 16:11:56,887 INFO: rec_at_8: 0.7532 
+2023-03-04 16:11:56,887 INFO: prec_at_8: 0.5045 
+2023-03-04 16:11:56,887 INFO: evaluation finish in dev dataset, time: 6.42s 
+2023-03-04 16:11:57,048 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:11:57,048 INFO: Epoch 9 
+2023-03-04 16:12:11,348 INFO: epoch finish in train dataset, time: 14.30s, loss: 0.3429 
+2023-03-04 16:12:11,349 INFO: file for evaluation: dev 
+2023-03-04 16:12:17,772 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:12:17,772 INFO:         0.4407,   0.6081,    0.6164, 0.6122,    0.9058 
+2023-03-04 16:12:17,772 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:12:17,772 INFO:         0.4980,   0.6476,    0.6831, 0.6649,    0.9294 
+2023-03-04 16:12:17,772 INFO: rec_at_1: 0.2010 
+2023-03-04 16:12:17,772 INFO: prec_at_1: 0.8334 
+2023-03-04 16:12:17,772 INFO: rec_at_5: 0.6207 
+2023-03-04 16:12:17,772 INFO: prec_at_5: 0.6276 
+2023-03-04 16:12:17,772 INFO: rec_at_8: 0.7576 
+2023-03-04 16:12:17,773 INFO: prec_at_8: 0.5099 
+2023-03-04 16:12:17,773 INFO: evaluation finish in dev dataset, time: 6.42s 
+2023-03-04 16:12:17,994 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:12:17,995 INFO: Epoch 10 
+2023-03-04 16:12:31,806 INFO: epoch finish in train dataset, time: 13.81s, loss: 0.3432 
+2023-03-04 16:12:31,807 INFO: file for evaluation: dev 
+2023-03-04 16:12:38,303 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:12:38,304 INFO:         0.4438,   0.5658,    0.6446, 0.6026,    0.9072 
+2023-03-04 16:12:38,304 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:12:38,304 INFO:         0.4870,   0.6232,    0.6903, 0.6550,    0.9273 
+2023-03-04 16:12:38,304 INFO: rec_at_1: 0.1995 
+2023-03-04 16:12:38,304 INFO: prec_at_1: 0.8328 
+2023-03-04 16:12:38,304 INFO: rec_at_5: 0.6217 
+2023-03-04 16:12:38,304 INFO: prec_at_5: 0.6229 
+2023-03-04 16:12:38,304 INFO: rec_at_8: 0.7576 
+2023-03-04 16:12:38,304 INFO: prec_at_8: 0.5079 
+2023-03-04 16:12:38,304 INFO: evaluation finish in dev dataset, time: 6.50s 
+2023-03-04 16:12:38,305 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:12:38,305 INFO: Epoch 11 
+2023-03-04 16:12:52,614 INFO: epoch finish in train dataset, time: 14.31s, loss: 0.3414 
+2023-03-04 16:12:52,614 INFO: file for evaluation: dev 
+2023-03-04 16:12:59,129 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:12:59,129 INFO:         0.4439,   0.6318,    0.6143, 0.6230,    0.9078 
+2023-03-04 16:12:59,129 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:12:59,129 INFO:         0.5002,   0.6593,    0.6746, 0.6668,    0.9313 
+2023-03-04 16:12:59,129 INFO: rec_at_1: 0.2000 
+2023-03-04 16:12:59,129 INFO: prec_at_1: 0.8360 
+2023-03-04 16:12:59,129 INFO: rec_at_5: 0.6250 
+2023-03-04 16:12:59,129 INFO: prec_at_5: 0.6278 
+2023-03-04 16:12:59,129 INFO: rec_at_8: 0.7594 
+2023-03-04 16:12:59,129 INFO: prec_at_8: 0.5085 
+2023-03-04 16:12:59,129 INFO: evaluation finish in dev dataset, time: 6.52s 
+2023-03-04 16:12:59,333 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:12:59,333 INFO: Epoch 12 
+2023-03-04 16:13:13,471 INFO: epoch finish in train dataset, time: 14.14s, loss: 0.3399 
+2023-03-04 16:13:13,472 INFO: file for evaluation: dev 
+2023-03-04 16:13:19,904 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:13:19,904 INFO:         0.4560,   0.6243,    0.6221, 0.6232,    0.9098 
+2023-03-04 16:13:19,904 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:13:19,905 INFO:         0.5114,   0.6732,    0.6803, 0.6767,    0.9337 
+2023-03-04 16:13:19,905 INFO: rec_at_1: 0.2046 
+2023-03-04 16:13:19,905 INFO: prec_at_1: 0.8455 
+2023-03-04 16:13:19,905 INFO: rec_at_5: 0.6264 
+2023-03-04 16:13:19,905 INFO: prec_at_5: 0.6324 
+2023-03-04 16:13:19,905 INFO: rec_at_8: 0.7632 
+2023-03-04 16:13:19,905 INFO: prec_at_8: 0.5149 
+2023-03-04 16:13:19,905 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:13:20,125 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:13:20,125 INFO: Epoch 13 
+2023-03-04 16:13:34,000 INFO: epoch finish in train dataset, time: 13.87s, loss: 0.3384 
+2023-03-04 16:13:34,000 INFO: file for evaluation: dev 
+2023-03-04 16:13:40,415 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:13:40,415 INFO:         0.4615,   0.6090,    0.6463, 0.6271,    0.9107 
+2023-03-04 16:13:40,415 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:13:40,415 INFO:         0.5122,   0.6593,    0.6966, 0.6775,    0.9326 
+2023-03-04 16:13:40,415 INFO: rec_at_1: 0.2054 
+2023-03-04 16:13:40,415 INFO: prec_at_1: 0.8411 
+2023-03-04 16:13:40,415 INFO: rec_at_5: 0.6268 
+2023-03-04 16:13:40,415 INFO: prec_at_5: 0.6310 
+2023-03-04 16:13:40,416 INFO: rec_at_8: 0.7643 
+2023-03-04 16:13:40,416 INFO: prec_at_8: 0.5137 
+2023-03-04 16:13:40,416 INFO: evaluation finish in dev dataset, time: 6.42s 
+2023-03-04 16:13:40,635 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:13:40,635 INFO: Epoch 14 
+2023-03-04 16:13:54,415 INFO: epoch finish in train dataset, time: 13.78s, loss: 0.3367 
+2023-03-04 16:13:54,416 INFO: file for evaluation: dev 
+2023-03-04 16:14:01,160 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:14:01,160 INFO:         0.4690,   0.6090,    0.6490, 0.6283,    0.9102 
+2023-03-04 16:14:01,160 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:14:01,160 INFO:         0.5105,   0.6615,    0.6909, 0.6759,    0.9328 
+2023-03-04 16:14:01,160 INFO: rec_at_1: 0.2025 
+2023-03-04 16:14:01,161 INFO: prec_at_1: 0.8411 
+2023-03-04 16:14:01,161 INFO: rec_at_5: 0.6310 
+2023-03-04 16:14:01,161 INFO: prec_at_5: 0.6346 
+2023-03-04 16:14:01,161 INFO: rec_at_8: 0.7669 
+2023-03-04 16:14:01,161 INFO: prec_at_8: 0.5146 
+2023-03-04 16:14:01,161 INFO: evaluation finish in dev dataset, time: 6.75s 
+2023-03-04 16:14:01,162 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:14:01,162 INFO: Epoch 15 
+2023-03-04 16:14:15,141 INFO: epoch finish in train dataset, time: 13.98s, loss: 0.3369 
+2023-03-04 16:14:15,141 INFO: file for evaluation: dev 
+2023-03-04 16:14:21,573 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:14:21,573 INFO:         0.4635,   0.6448,    0.6185, 0.6313,    0.9123 
+2023-03-04 16:14:21,573 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:14:21,573 INFO:         0.5182,   0.6851,    0.6803, 0.6827,    0.9352 
+2023-03-04 16:14:21,573 INFO: rec_at_1: 0.2022 
+2023-03-04 16:14:21,573 INFO: prec_at_1: 0.8347 
+2023-03-04 16:14:21,573 INFO: rec_at_5: 0.6356 
+2023-03-04 16:14:21,573 INFO: prec_at_5: 0.6392 
+2023-03-04 16:14:21,574 INFO: rec_at_8: 0.7693 
+2023-03-04 16:14:21,574 INFO: prec_at_8: 0.5175 
+2023-03-04 16:14:21,574 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:14:21,799 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:14:21,799 INFO: Epoch 16 
+2023-03-04 16:14:35,449 INFO: epoch finish in train dataset, time: 13.65s, loss: 0.3355 
+2023-03-04 16:14:35,449 INFO: file for evaluation: dev 
+2023-03-04 16:14:41,933 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:14:41,933 INFO:         0.4757,   0.6155,    0.6459, 0.6303,    0.9117 
+2023-03-04 16:14:41,933 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:14:41,933 INFO:         0.5216,   0.6721,    0.6996, 0.6856,    0.9358 
+2023-03-04 16:14:41,933 INFO: rec_at_1: 0.2044 
+2023-03-04 16:14:41,933 INFO: prec_at_1: 0.8474 
+2023-03-04 16:14:41,933 INFO: rec_at_5: 0.6386 
+2023-03-04 16:14:41,933 INFO: prec_at_5: 0.6407 
+2023-03-04 16:14:41,933 INFO: rec_at_8: 0.7751 
+2023-03-04 16:14:41,933 INFO: prec_at_8: 0.5204 
+2023-03-04 16:14:41,933 INFO: evaluation finish in dev dataset, time: 6.48s 
+2023-03-04 16:14:42,156 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:14:42,156 INFO: Epoch 17 
+2023-03-04 16:14:56,039 INFO: epoch finish in train dataset, time: 13.88s, loss: 0.3346 
+2023-03-04 16:14:56,040 INFO: file for evaluation: dev 
+2023-03-04 16:15:02,812 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:15:02,812 INFO:         0.4669,   0.6226,    0.6385, 0.6305,    0.9114 
+2023-03-04 16:15:02,812 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:15:02,812 INFO:         0.5171,   0.6635,    0.7009, 0.6817,    0.9344 
+2023-03-04 16:15:02,812 INFO: rec_at_1: 0.2041 
+2023-03-04 16:15:02,812 INFO: prec_at_1: 0.8442 
+2023-03-04 16:15:02,812 INFO: rec_at_5: 0.6347 
+2023-03-04 16:15:02,812 INFO: prec_at_5: 0.6380 
+2023-03-04 16:15:02,812 INFO: rec_at_8: 0.7675 
+2023-03-04 16:15:02,812 INFO: prec_at_8: 0.5161 
+2023-03-04 16:15:02,812 INFO: evaluation finish in dev dataset, time: 6.77s 
+2023-03-04 16:15:02,814 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:15:02,814 INFO: Epoch 18 
+2023-03-04 16:15:16,470 INFO: epoch finish in train dataset, time: 13.66s, loss: 0.3339 
+2023-03-04 16:15:16,471 INFO: file for evaluation: dev 
+2023-03-04 16:15:22,976 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:15:22,976 INFO:         0.4771,   0.6245,    0.6462, 0.6352,    0.9128 
+2023-03-04 16:15:22,976 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:15:22,977 INFO:         0.5246,   0.6831,    0.6933, 0.6882,    0.9354 
+2023-03-04 16:15:22,977 INFO: rec_at_1: 0.2044 
+2023-03-04 16:15:22,977 INFO: prec_at_1: 0.8430 
+2023-03-04 16:15:22,977 INFO: rec_at_5: 0.6342 
+2023-03-04 16:15:22,977 INFO: prec_at_5: 0.6399 
+2023-03-04 16:15:22,977 INFO: rec_at_8: 0.7676 
+2023-03-04 16:15:22,977 INFO: prec_at_8: 0.5181 
+2023-03-04 16:15:22,977 INFO: evaluation finish in dev dataset, time: 6.51s 
+2023-03-04 16:15:23,197 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:15:23,198 INFO: Epoch 19 
+2023-03-04 16:15:37,130 INFO: epoch finish in train dataset, time: 13.93s, loss: 0.3336 
+2023-03-04 16:15:37,130 INFO: file for evaluation: dev 
+2023-03-04 16:15:43,670 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:15:43,670 INFO:         0.4682,   0.6421,    0.6383, 0.6402,    0.9138 
+2023-03-04 16:15:43,670 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:15:43,670 INFO:         0.5190,   0.6665,    0.7011, 0.6834,    0.9352 
+2023-03-04 16:15:43,670 INFO: rec_at_1: 0.2049 
+2023-03-04 16:15:43,671 INFO: prec_at_1: 0.8404 
+2023-03-04 16:15:43,671 INFO: rec_at_5: 0.6354 
+2023-03-04 16:15:43,671 INFO: prec_at_5: 0.6383 
+2023-03-04 16:15:43,671 INFO: rec_at_8: 0.7716 
+2023-03-04 16:15:43,671 INFO: prec_at_8: 0.5183 
+2023-03-04 16:15:43,671 INFO: evaluation finish in dev dataset, time: 6.54s 
+2023-03-04 16:15:43,673 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:15:43,673 INFO: Epoch 20 
+2023-03-04 16:15:57,558 INFO: epoch finish in train dataset, time: 13.89s, loss: 0.3327 
+2023-03-04 16:15:57,558 INFO: file for evaluation: dev 
+2023-03-04 16:16:03,977 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:16:03,977 INFO:         0.4724,   0.6389,    0.6355, 0.6372,    0.9133 
+2023-03-04 16:16:03,977 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:16:03,977 INFO:         0.5226,   0.6815,    0.6915, 0.6865,    0.9364 
+2023-03-04 16:16:03,977 INFO: rec_at_1: 0.2013 
+2023-03-04 16:16:03,977 INFO: prec_at_1: 0.8334 
+2023-03-04 16:16:03,977 INFO: rec_at_5: 0.6329 
+2023-03-04 16:16:03,977 INFO: prec_at_5: 0.6383 
+2023-03-04 16:16:03,977 INFO: rec_at_8: 0.7677 
+2023-03-04 16:16:03,977 INFO: prec_at_8: 0.5180 
+2023-03-04 16:16:03,978 INFO: evaluation finish in dev dataset, time: 6.42s 
+2023-03-04 16:16:03,979 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:16:03,979 INFO: Epoch 21 
+2023-03-04 16:16:17,642 INFO: epoch finish in train dataset, time: 13.66s, loss: 0.3317 
+2023-03-04 16:16:17,643 INFO: file for evaluation: dev 
+2023-03-04 16:16:24,063 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:16:24,063 INFO:         0.4857,   0.6135,    0.6831, 0.6464,    0.9135 
+2023-03-04 16:16:24,063 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:16:24,064 INFO:         0.5246,   0.6525,    0.7279, 0.6882,    0.9363 
+2023-03-04 16:16:24,064 INFO: rec_at_1: 0.2069 
+2023-03-04 16:16:24,064 INFO: prec_at_1: 0.8442 
+2023-03-04 16:16:24,064 INFO: rec_at_5: 0.6367 
+2023-03-04 16:16:24,064 INFO: prec_at_5: 0.6399 
+2023-03-04 16:16:24,064 INFO: rec_at_8: 0.7726 
+2023-03-04 16:16:24,064 INFO: prec_at_8: 0.5208 
+2023-03-04 16:16:24,064 INFO: evaluation finish in dev dataset, time: 6.42s 
+2023-03-04 16:16:24,065 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:16:24,066 INFO: Epoch 22 
+2023-03-04 16:16:37,614 INFO: epoch finish in train dataset, time: 13.55s, loss: 0.3314 
+2023-03-04 16:16:37,614 INFO: file for evaluation: dev 
+2023-03-04 16:16:44,062 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:16:44,062 INFO:         0.4774,   0.6388,    0.6453, 0.6420,    0.9145 
+2023-03-04 16:16:44,062 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:16:44,062 INFO:         0.5301,   0.6875,    0.6984, 0.6929,    0.9375 
+2023-03-04 16:16:44,062 INFO: rec_at_1: 0.2054 
+2023-03-04 16:16:44,062 INFO: prec_at_1: 0.8506 
+2023-03-04 16:16:44,062 INFO: rec_at_5: 0.6385 
+2023-03-04 16:16:44,062 INFO: prec_at_5: 0.6464 
+2023-03-04 16:16:44,062 INFO: rec_at_8: 0.7743 
+2023-03-04 16:16:44,062 INFO: prec_at_8: 0.5234 
+2023-03-04 16:16:44,062 INFO: evaluation finish in dev dataset, time: 6.45s 
+2023-03-04 16:16:44,283 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:16:44,283 INFO: Epoch 23 
+2023-03-04 16:16:58,103 INFO: epoch finish in train dataset, time: 13.82s, loss: 0.3317 
+2023-03-04 16:16:58,103 INFO: file for evaluation: dev 
+2023-03-04 16:17:05,856 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:17:05,856 INFO:         0.4846,   0.6253,    0.6595, 0.6419,    0.9145 
+2023-03-04 16:17:05,856 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:17:05,856 INFO:         0.5281,   0.6744,    0.7088, 0.6912,    0.9366 
+2023-03-04 16:17:05,857 INFO: rec_at_1: 0.2053 
+2023-03-04 16:17:05,857 INFO: prec_at_1: 0.8512 
+2023-03-04 16:17:05,857 INFO: rec_at_5: 0.6355 
+2023-03-04 16:17:05,857 INFO: prec_at_5: 0.6414 
+2023-03-04 16:17:05,857 INFO: rec_at_8: 0.7714 
+2023-03-04 16:17:05,857 INFO: prec_at_8: 0.5208 
+2023-03-04 16:17:05,857 INFO: evaluation finish in dev dataset, time: 7.75s 
+2023-03-04 16:17:05,859 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:17:05,859 INFO: Epoch 24 
+2023-03-04 16:17:19,595 INFO: epoch finish in train dataset, time: 13.74s, loss: 0.3301 
+2023-03-04 16:17:19,595 INFO: file for evaluation: dev 
+2023-03-04 16:17:26,028 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:17:26,028 INFO:         0.4891,   0.6513,    0.6526, 0.6520,    0.9154 
+2023-03-04 16:17:26,028 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:17:26,028 INFO:         0.5329,   0.6829,    0.7081, 0.6953,    0.9395 
+2023-03-04 16:17:26,028 INFO: rec_at_1: 0.2089 
+2023-03-04 16:17:26,028 INFO: prec_at_1: 0.8570 
+2023-03-04 16:17:26,029 INFO: rec_at_5: 0.6436 
+2023-03-04 16:17:26,029 INFO: prec_at_5: 0.6509 
+2023-03-04 16:17:26,029 INFO: rec_at_8: 0.7849 
+2023-03-04 16:17:26,029 INFO: prec_at_8: 0.5288 
+2023-03-04 16:17:26,029 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:17:26,252 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:17:26,252 INFO: Epoch 25 
+2023-03-04 16:17:40,103 INFO: epoch finish in train dataset, time: 13.85s, loss: 0.3301 
+2023-03-04 16:17:40,104 INFO: file for evaluation: dev 
+2023-03-04 16:17:46,547 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:17:46,547 INFO:         0.4872,   0.6293,    0.6611, 0.6448,    0.9136 
+2023-03-04 16:17:46,547 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:17:46,548 INFO:         0.5304,   0.6810,    0.7057, 0.6932,    0.9375 
+2023-03-04 16:17:46,548 INFO: rec_at_1: 0.2115 
+2023-03-04 16:17:46,548 INFO: prec_at_1: 0.8652 
+2023-03-04 16:17:46,548 INFO: rec_at_5: 0.6406 
+2023-03-04 16:17:46,548 INFO: prec_at_5: 0.6450 
+2023-03-04 16:17:46,548 INFO: rec_at_8: 0.7773 
+2023-03-04 16:17:46,548 INFO: prec_at_8: 0.5224 
+2023-03-04 16:17:46,548 INFO: evaluation finish in dev dataset, time: 6.44s 
+2023-03-04 16:17:46,550 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:17:46,550 INFO: Epoch 26 
+2023-03-04 16:18:00,084 INFO: epoch finish in train dataset, time: 13.53s, loss: 0.3290 
+2023-03-04 16:18:00,085 INFO: file for evaluation: dev 
+2023-03-04 16:18:06,823 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:18:06,823 INFO:         0.4886,   0.6585,    0.6516, 0.6550,    0.9154 
+2023-03-04 16:18:06,823 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:18:06,824 INFO:         0.5306,   0.6897,    0.6970, 0.6933,    0.9387 
+2023-03-04 16:18:06,824 INFO: rec_at_1: 0.2068 
+2023-03-04 16:18:06,824 INFO: prec_at_1: 0.8500 
+2023-03-04 16:18:06,824 INFO: rec_at_5: 0.6376 
+2023-03-04 16:18:06,824 INFO: prec_at_5: 0.6432 
+2023-03-04 16:18:06,824 INFO: rec_at_8: 0.7789 
+2023-03-04 16:18:06,824 INFO: prec_at_8: 0.5246 
+2023-03-04 16:18:06,824 INFO: evaluation finish in dev dataset, time: 6.74s 
+2023-03-04 16:18:06,826 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:18:06,826 INFO: Epoch 27 
+2023-03-04 16:18:20,415 INFO: epoch finish in train dataset, time: 13.59s, loss: 0.3283 
+2023-03-04 16:18:20,415 INFO: file for evaluation: dev 
+2023-03-04 16:18:26,908 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:18:26,908 INFO:         0.4922,   0.6311,    0.6772, 0.6533,    0.9152 
+2023-03-04 16:18:26,908 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:18:26,908 INFO:         0.5347,   0.6717,    0.7239, 0.6968,    0.9378 
+2023-03-04 16:18:26,908 INFO: rec_at_1: 0.2059 
+2023-03-04 16:18:26,909 INFO: prec_at_1: 0.8512 
+2023-03-04 16:18:26,909 INFO: rec_at_5: 0.6406 
+2023-03-04 16:18:26,909 INFO: prec_at_5: 0.6464 
+2023-03-04 16:18:26,909 INFO: rec_at_8: 0.7818 
+2023-03-04 16:18:26,909 INFO: prec_at_8: 0.5251 
+2023-03-04 16:18:26,909 INFO: evaluation finish in dev dataset, time: 6.49s 
+2023-03-04 16:18:27,132 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:18:27,133 INFO: Epoch 28 
+2023-03-04 16:18:40,474 INFO: epoch finish in train dataset, time: 13.34s, loss: 0.3299 
+2023-03-04 16:18:40,474 INFO: file for evaluation: dev 
+2023-03-04 16:18:46,941 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:18:46,941 INFO:         0.4892,   0.6272,    0.6762, 0.6508,    0.9156 
+2023-03-04 16:18:46,941 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:18:46,941 INFO:         0.5306,   0.6707,    0.7175, 0.6933,    0.9373 
+2023-03-04 16:18:46,941 INFO: rec_at_1: 0.2088 
+2023-03-04 16:18:46,941 INFO: prec_at_1: 0.8519 
+2023-03-04 16:18:46,941 INFO: rec_at_5: 0.6435 
+2023-03-04 16:18:46,941 INFO: prec_at_5: 0.6478 
+2023-03-04 16:18:46,941 INFO: rec_at_8: 0.7756 
+2023-03-04 16:18:46,941 INFO: prec_at_8: 0.5234 
+2023-03-04 16:18:46,942 INFO: evaluation finish in dev dataset, time: 6.47s 
+2023-03-04 16:18:46,943 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:18:46,944 INFO: Epoch 29 
+2023-03-04 16:19:00,531 INFO: epoch finish in train dataset, time: 13.59s, loss: 0.3287 
+2023-03-04 16:19:00,531 INFO: file for evaluation: dev 
+2023-03-04 16:19:07,052 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:19:07,052 INFO:         0.4879,   0.6383,    0.6589, 0.6484,    0.9139 
+2023-03-04 16:19:07,052 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:19:07,052 INFO:         0.5325,   0.6806,    0.7099, 0.6949,    0.9376 
+2023-03-04 16:19:07,052 INFO: rec_at_1: 0.2068 
+2023-03-04 16:19:07,052 INFO: prec_at_1: 0.8493 
+2023-03-04 16:19:07,052 INFO: rec_at_5: 0.6366 
+2023-03-04 16:19:07,052 INFO: prec_at_5: 0.6442 
+2023-03-04 16:19:07,052 INFO: rec_at_8: 0.7787 
+2023-03-04 16:19:07,052 INFO: prec_at_8: 0.5240 
+2023-03-04 16:19:07,053 INFO: evaluation finish in dev dataset, time: 6.52s 
+2023-03-04 16:19:07,054 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:19:07,054 INFO: Epoch 30 
+2023-03-04 16:19:20,509 INFO: epoch finish in train dataset, time: 13.45s, loss: 0.3271 
+2023-03-04 16:19:20,510 INFO: file for evaluation: dev 
+2023-03-04 16:19:27,131 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:19:27,132 INFO:         0.4927,   0.6533,    0.6617, 0.6574,    0.9150 
+2023-03-04 16:19:27,132 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:19:27,132 INFO:         0.5314,   0.6839,    0.7045, 0.6940,    0.9373 
+2023-03-04 16:19:27,132 INFO: rec_at_1: 0.2089 
+2023-03-04 16:19:27,132 INFO: prec_at_1: 0.8570 
+2023-03-04 16:19:27,132 INFO: rec_at_5: 0.6384 
+2023-03-04 16:19:27,132 INFO: prec_at_5: 0.6432 
+2023-03-04 16:19:27,132 INFO: rec_at_8: 0.7758 
+2023-03-04 16:19:27,132 INFO: prec_at_8: 0.5234 
+2023-03-04 16:19:27,132 INFO: evaluation finish in dev dataset, time: 6.62s 
+2023-03-04 16:19:27,134 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:19:27,134 INFO: Epoch 31 
+2023-03-04 16:19:40,704 INFO: epoch finish in train dataset, time: 13.57s, loss: 0.3270 
+2023-03-04 16:19:40,704 INFO: file for evaluation: dev 
+2023-03-04 16:19:47,119 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:19:47,120 INFO:         0.4850,   0.6522,    0.6562, 0.6542,    0.9151 
+2023-03-04 16:19:47,120 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:19:47,120 INFO:         0.5262,   0.6748,    0.7049, 0.6895,    0.9376 
+2023-03-04 16:19:47,120 INFO: rec_at_1: 0.2088 
+2023-03-04 16:19:47,120 INFO: prec_at_1: 0.8544 
+2023-03-04 16:19:47,120 INFO: rec_at_5: 0.6414 
+2023-03-04 16:19:47,120 INFO: prec_at_5: 0.6454 
+2023-03-04 16:19:47,120 INFO: rec_at_8: 0.7777 
+2023-03-04 16:19:47,120 INFO: prec_at_8: 0.5234 
+2023-03-04 16:19:47,120 INFO: evaluation finish in dev dataset, time: 6.42s 
+2023-03-04 16:19:47,122 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:19:47,122 INFO: Epoch 32 
+2023-03-04 16:20:00,681 INFO: epoch finish in train dataset, time: 13.56s, loss: 0.3258 
+2023-03-04 16:20:00,681 INFO: file for evaluation: dev 
+2023-03-04 16:20:07,184 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:20:07,184 INFO:         0.4954,   0.6446,    0.6651, 0.6547,    0.9166 
+2023-03-04 16:20:07,184 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:20:07,184 INFO:         0.5378,   0.6861,    0.7132, 0.6994,    0.9392 
+2023-03-04 16:20:07,184 INFO: rec_at_1: 0.2099 
+2023-03-04 16:20:07,184 INFO: prec_at_1: 0.8544 
+2023-03-04 16:20:07,184 INFO: rec_at_5: 0.6457 
+2023-03-04 16:20:07,185 INFO: prec_at_5: 0.6510 
+2023-03-04 16:20:07,185 INFO: rec_at_8: 0.7845 
+2023-03-04 16:20:07,185 INFO: prec_at_8: 0.5287 
+2023-03-04 16:20:07,185 INFO: evaluation finish in dev dataset, time: 6.50s 
+2023-03-04 16:20:07,409 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:20:07,410 INFO: Epoch 33 
+2023-03-04 16:20:20,811 INFO: epoch finish in train dataset, time: 13.40s, loss: 0.3260 
+2023-03-04 16:20:20,811 INFO: file for evaluation: dev 
+2023-03-04 16:20:27,252 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:20:27,252 INFO:         0.4912,   0.6271,    0.6816, 0.6532,    0.9162 
+2023-03-04 16:20:27,252 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:20:27,252 INFO:         0.5347,   0.6711,    0.7247, 0.6968,    0.9389 
+2023-03-04 16:20:27,252 INFO: rec_at_1: 0.2098 
+2023-03-04 16:20:27,252 INFO: prec_at_1: 0.8570 
+2023-03-04 16:20:27,252 INFO: rec_at_5: 0.6415 
+2023-03-04 16:20:27,252 INFO: prec_at_5: 0.6465 
+2023-03-04 16:20:27,252 INFO: rec_at_8: 0.7789 
+2023-03-04 16:20:27,252 INFO: prec_at_8: 0.5253 
+2023-03-04 16:20:27,252 INFO: evaluation finish in dev dataset, time: 6.44s 
+2023-03-04 16:20:27,254 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:20:27,254 INFO: Epoch 34 
+2023-03-04 16:20:41,055 INFO: epoch finish in train dataset, time: 13.80s, loss: 0.3264 
+2023-03-04 16:20:41,055 INFO: file for evaluation: dev 
+2023-03-04 16:20:47,484 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:20:47,485 INFO:         0.4985,   0.6373,    0.6814, 0.6586,    0.9159 
+2023-03-04 16:20:47,485 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:20:47,485 INFO:         0.5368,   0.6731,    0.7261, 0.6986,    0.9392 
+2023-03-04 16:20:47,485 INFO: rec_at_1: 0.2090 
+2023-03-04 16:20:47,485 INFO: prec_at_1: 0.8525 
+2023-03-04 16:20:47,485 INFO: rec_at_5: 0.6458 
+2023-03-04 16:20:47,485 INFO: prec_at_5: 0.6514 
+2023-03-04 16:20:47,485 INFO: rec_at_8: 0.7844 
+2023-03-04 16:20:47,485 INFO: prec_at_8: 0.5277 
+2023-03-04 16:20:47,485 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:20:47,487 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:20:47,487 INFO: Epoch 35 
+2023-03-04 16:21:01,528 INFO: epoch finish in train dataset, time: 14.04s, loss: 0.3265 
+2023-03-04 16:21:01,528 INFO: file for evaluation: dev 
+2023-03-04 16:21:07,975 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:21:07,976 INFO:         0.4923,   0.6336,    0.6661, 0.6494,    0.9164 
+2023-03-04 16:21:07,976 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:21:07,976 INFO:         0.5333,   0.6795,    0.7125, 0.6956,    0.9397 
+2023-03-04 16:21:07,976 INFO: rec_at_1: 0.2109 
+2023-03-04 16:21:07,976 INFO: prec_at_1: 0.8608 
+2023-03-04 16:21:07,976 INFO: rec_at_5: 0.6407 
+2023-03-04 16:21:07,976 INFO: prec_at_5: 0.6484 
+2023-03-04 16:21:07,976 INFO: rec_at_8: 0.7821 
+2023-03-04 16:21:07,976 INFO: prec_at_8: 0.5255 
+2023-03-04 16:21:07,976 INFO: evaluation finish in dev dataset, time: 6.45s 
+2023-03-04 16:21:07,978 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:21:07,978 INFO: Epoch 36 
+2023-03-04 16:21:21,718 INFO: epoch finish in train dataset, time: 13.74s, loss: 0.3252 
+2023-03-04 16:21:21,718 INFO: file for evaluation: dev 
+2023-03-04 16:21:28,179 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:21:28,179 INFO:         0.4891,   0.6557,    0.6405, 0.6480,    0.9163 
+2023-03-04 16:21:28,179 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:21:28,180 INFO:         0.5375,   0.6998,    0.6985, 0.6992,    0.9401 
+2023-03-04 16:21:28,180 INFO: rec_at_1: 0.2109 
+2023-03-04 16:21:28,180 INFO: prec_at_1: 0.8570 
+2023-03-04 16:21:28,180 INFO: rec_at_5: 0.6423 
+2023-03-04 16:21:28,180 INFO: prec_at_5: 0.6516 
+2023-03-04 16:21:28,180 INFO: rec_at_8: 0.7802 
+2023-03-04 16:21:28,180 INFO: prec_at_8: 0.5261 
+2023-03-04 16:21:28,180 INFO: evaluation finish in dev dataset, time: 6.46s 
+2023-03-04 16:21:28,182 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:21:28,182 INFO: Epoch 37 
+2023-03-04 16:21:42,076 INFO: epoch finish in train dataset, time: 13.89s, loss: 0.3249 
+2023-03-04 16:21:42,076 INFO: file for evaluation: dev 
+2023-03-04 16:21:48,522 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:21:48,522 INFO:         0.4968,   0.6555,    0.6711, 0.6632,    0.9161 
+2023-03-04 16:21:48,522 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:21:48,522 INFO:         0.5379,   0.6806,    0.7196, 0.6995,    0.9400 
+2023-03-04 16:21:48,522 INFO: rec_at_1: 0.2113 
+2023-03-04 16:21:48,522 INFO: prec_at_1: 0.8544 
+2023-03-04 16:21:48,522 INFO: rec_at_5: 0.6424 
+2023-03-04 16:21:48,523 INFO: prec_at_5: 0.6492 
+2023-03-04 16:21:48,523 INFO: rec_at_8: 0.7797 
+2023-03-04 16:21:48,523 INFO: prec_at_8: 0.5265 
+2023-03-04 16:21:48,523 INFO: evaluation finish in dev dataset, time: 6.45s 
+2023-03-04 16:21:48,746 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:21:48,746 INFO: Epoch 38 
+2023-03-04 16:22:02,418 INFO: epoch finish in train dataset, time: 13.67s, loss: 0.3243 
+2023-03-04 16:22:02,418 INFO: file for evaluation: dev 
+2023-03-04 16:22:10,239 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:22:10,239 INFO:         0.4948,   0.6341,    0.6700, 0.6515,    0.9163 
+2023-03-04 16:22:10,239 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:22:10,239 INFO:         0.5370,   0.6824,    0.7158, 0.6987,    0.9388 
+2023-03-04 16:22:10,239 INFO: rec_at_1: 0.2083 
+2023-03-04 16:22:10,239 INFO: prec_at_1: 0.8506 
+2023-03-04 16:22:10,239 INFO: rec_at_5: 0.6435 
+2023-03-04 16:22:10,239 INFO: prec_at_5: 0.6491 
+2023-03-04 16:22:10,239 INFO: rec_at_8: 0.7810 
+2023-03-04 16:22:10,239 INFO: prec_at_8: 0.5257 
+2023-03-04 16:22:10,239 INFO: evaluation finish in dev dataset, time: 7.82s 
+2023-03-04 16:22:10,242 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:22:10,242 INFO: Epoch 39 
+2023-03-04 16:22:24,249 INFO: epoch finish in train dataset, time: 14.01s, loss: 0.3234 
+2023-03-04 16:22:24,249 INFO: file for evaluation: dev 
+2023-03-04 16:22:32,521 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:22:32,521 INFO:         0.4993,   0.6752,    0.6543, 0.6646,    0.9174 
+2023-03-04 16:22:32,521 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:22:32,522 INFO:         0.5374,   0.6972,    0.7011, 0.6991,    0.9406 
+2023-03-04 16:22:32,522 INFO: rec_at_1: 0.2099 
+2023-03-04 16:22:32,522 INFO: prec_at_1: 0.8576 
+2023-03-04 16:22:32,522 INFO: rec_at_5: 0.6460 
+2023-03-04 16:22:32,522 INFO: prec_at_5: 0.6529 
+2023-03-04 16:22:32,522 INFO: rec_at_8: 0.7866 
+2023-03-04 16:22:32,522 INFO: prec_at_8: 0.5287 
+2023-03-04 16:22:32,522 INFO: evaluation finish in dev dataset, time: 8.27s 
+2023-03-04 16:22:32,524 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:22:32,524 INFO: Epoch 40 
+2023-03-04 16:22:46,140 INFO: epoch finish in train dataset, time: 13.62s, loss: 0.3238 
+2023-03-04 16:22:46,140 INFO: file for evaluation: dev 
+2023-03-04 16:22:52,887 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:22:52,887 INFO:         0.4956,   0.6304,    0.6697, 0.6495,    0.9180 
+2023-03-04 16:22:52,887 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:22:52,887 INFO:         0.5360,   0.6820,    0.7145, 0.6979,    0.9393 
+2023-03-04 16:22:52,888 INFO: rec_at_1: 0.2091 
+2023-03-04 16:22:52,888 INFO: prec_at_1: 0.8551 
+2023-03-04 16:22:52,888 INFO: rec_at_5: 0.6450 
+2023-03-04 16:22:52,888 INFO: prec_at_5: 0.6502 
+2023-03-04 16:22:52,888 INFO: rec_at_8: 0.7802 
+2023-03-04 16:22:52,888 INFO: prec_at_8: 0.5258 
+2023-03-04 16:22:52,888 INFO: evaluation finish in dev dataset, time: 6.75s 
+2023-03-04 16:22:52,890 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:22:52,890 INFO: Epoch 41 
+2023-03-04 16:23:06,667 INFO: epoch finish in train dataset, time: 13.78s, loss: 0.3249 
+2023-03-04 16:23:06,668 INFO: file for evaluation: dev 
+2023-03-04 16:23:13,168 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:23:13,168 INFO:         0.4889,   0.6400,    0.6606, 0.6502,    0.9188 
+2023-03-04 16:23:13,168 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:23:13,168 INFO:         0.5372,   0.6874,    0.7110, 0.6990,    0.9396 
+2023-03-04 16:23:13,168 INFO: rec_at_1: 0.2121 
+2023-03-04 16:23:13,168 INFO: prec_at_1: 0.8627 
+2023-03-04 16:23:13,168 INFO: rec_at_5: 0.6447 
+2023-03-04 16:23:13,168 INFO: prec_at_5: 0.6511 
+2023-03-04 16:23:13,168 INFO: rec_at_8: 0.7845 
+2023-03-04 16:23:13,168 INFO: prec_at_8: 0.5284 
+2023-03-04 16:23:13,168 INFO: evaluation finish in dev dataset, time: 6.50s 
+2023-03-04 16:23:13,171 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:23:13,171 INFO: Epoch 42 
+2023-03-04 16:23:27,250 INFO: epoch finish in train dataset, time: 14.08s, loss: 0.3243 
+2023-03-04 16:23:27,250 INFO: file for evaluation: dev 
+2023-03-04 16:23:33,700 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:23:33,700 INFO:         0.4941,   0.6434,    0.6668, 0.6549,    0.9183 
+2023-03-04 16:23:33,700 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:23:33,700 INFO:         0.5332,   0.6797,    0.7122, 0.6955,    0.9392 
+2023-03-04 16:23:33,701 INFO: rec_at_1: 0.2092 
+2023-03-04 16:23:33,701 INFO: prec_at_1: 0.8582 
+2023-03-04 16:23:33,701 INFO: rec_at_5: 0.6459 
+2023-03-04 16:23:33,701 INFO: prec_at_5: 0.6487 
+2023-03-04 16:23:33,701 INFO: rec_at_8: 0.7833 
+2023-03-04 16:23:33,701 INFO: prec_at_8: 0.5270 
+2023-03-04 16:23:33,701 INFO: evaluation finish in dev dataset, time: 6.45s 
+2023-03-04 16:23:33,703 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:23:33,703 INFO: Epoch 43 
+2023-03-04 16:23:47,974 INFO: epoch finish in train dataset, time: 14.27s, loss: 0.3231 
+2023-03-04 16:23:47,974 INFO: file for evaluation: dev 
+2023-03-04 16:23:55,722 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:23:55,723 INFO:         0.4832,   0.6464,    0.6503, 0.6484,    0.9180 
+2023-03-04 16:23:55,723 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:23:55,723 INFO:         0.5310,   0.6849,    0.7026, 0.6936,    0.9385 
+2023-03-04 16:23:55,723 INFO: rec_at_1: 0.2134 
+2023-03-04 16:23:55,723 INFO: prec_at_1: 0.8627 
+2023-03-04 16:23:55,723 INFO: rec_at_5: 0.6398 
+2023-03-04 16:23:55,723 INFO: prec_at_5: 0.6456 
+2023-03-04 16:23:55,723 INFO: rec_at_8: 0.7825 
+2023-03-04 16:23:55,723 INFO: prec_at_8: 0.5253 
+2023-03-04 16:23:55,723 INFO: evaluation finish in dev dataset, time: 7.75s 
+2023-03-04 16:23:55,725 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:23:55,725 INFO: Epoch 44 
+2023-03-04 16:24:09,288 INFO: epoch finish in train dataset, time: 13.56s, loss: 0.3237 
+2023-03-04 16:24:09,289 INFO: file for evaluation: dev 
+2023-03-04 16:24:16,012 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:24:16,012 INFO:         0.4926,   0.6527,    0.6556, 0.6542,    0.9195 
+2023-03-04 16:24:16,012 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:24:16,012 INFO:         0.5354,   0.6916,    0.7033, 0.6974,    0.9406 
+2023-03-04 16:24:16,012 INFO: rec_at_1: 0.2125 
+2023-03-04 16:24:16,013 INFO: prec_at_1: 0.8633 
+2023-03-04 16:24:16,013 INFO: rec_at_5: 0.6431 
+2023-03-04 16:24:16,013 INFO: prec_at_5: 0.6501 
+2023-03-04 16:24:16,013 INFO: rec_at_8: 0.7839 
+2023-03-04 16:24:16,013 INFO: prec_at_8: 0.5283 
+2023-03-04 16:24:16,013 INFO: evaluation finish in dev dataset, time: 6.72s 
+2023-03-04 16:24:16,015 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:24:16,015 INFO: Epoch 45 
+2023-03-04 16:24:29,415 INFO: epoch finish in train dataset, time: 13.40s, loss: 0.3223 
+2023-03-04 16:24:29,415 INFO: file for evaluation: dev 
+2023-03-04 16:24:35,855 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:24:35,855 INFO:         0.4984,   0.6432,    0.6626, 0.6528,    0.9198 
+2023-03-04 16:24:35,855 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:24:35,855 INFO:         0.5409,   0.6942,    0.7100, 0.7020,    0.9409 
+2023-03-04 16:24:35,855 INFO: rec_at_1: 0.2105 
+2023-03-04 16:24:35,855 INFO: prec_at_1: 0.8551 
+2023-03-04 16:24:35,855 INFO: rec_at_5: 0.6472 
+2023-03-04 16:24:35,855 INFO: prec_at_5: 0.6512 
+2023-03-04 16:24:35,856 INFO: rec_at_8: 0.7837 
+2023-03-04 16:24:35,856 INFO: prec_at_8: 0.5287 
+2023-03-04 16:24:35,856 INFO: evaluation finish in dev dataset, time: 6.44s 
+2023-03-04 16:24:36,129 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:24:36,129 INFO: Epoch 46 
+2023-03-04 16:24:49,675 INFO: epoch finish in train dataset, time: 13.55s, loss: 0.3220 
+2023-03-04 16:24:49,675 INFO: file for evaluation: dev 
+2023-03-04 16:24:56,111 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:24:56,112 INFO:         0.4964,   0.6631,    0.6715, 0.6673,    0.9198 
+2023-03-04 16:24:56,112 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:24:56,112 INFO:         0.5387,   0.6875,    0.7133, 0.7002,    0.9396 
+2023-03-04 16:24:56,112 INFO: rec_at_1: 0.2134 
+2023-03-04 16:24:56,112 INFO: prec_at_1: 0.8659 
+2023-03-04 16:24:56,112 INFO: rec_at_5: 0.6433 
+2023-03-04 16:24:56,112 INFO: prec_at_5: 0.6493 
+2023-03-04 16:24:56,112 INFO: rec_at_8: 0.7793 
+2023-03-04 16:24:56,112 INFO: prec_at_8: 0.5260 
+2023-03-04 16:24:56,112 INFO: evaluation finish in dev dataset, time: 6.44s 
+2023-03-04 16:24:56,114 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:24:56,114 INFO: Epoch 47 
+2023-03-04 16:25:09,568 INFO: epoch finish in train dataset, time: 13.45s, loss: 0.3220 
+2023-03-04 16:25:09,568 INFO: file for evaluation: dev 
+2023-03-04 16:25:15,999 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:25:16,000 INFO:         0.4969,   0.6358,    0.6654, 0.6503,    0.9196 
+2023-03-04 16:25:16,000 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:25:16,000 INFO:         0.5394,   0.6882,    0.7139, 0.7008,    0.9410 
+2023-03-04 16:25:16,000 INFO: rec_at_1: 0.2104 
+2023-03-04 16:25:16,000 INFO: prec_at_1: 0.8627 
+2023-03-04 16:25:16,000 INFO: rec_at_5: 0.6478 
+2023-03-04 16:25:16,000 INFO: prec_at_5: 0.6521 
+2023-03-04 16:25:16,000 INFO: rec_at_8: 0.7860 
+2023-03-04 16:25:16,000 INFO: prec_at_8: 0.5281 
+2023-03-04 16:25:16,000 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:25:16,002 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:25:16,003 INFO: Epoch 48 
+2023-03-04 16:25:29,659 INFO: epoch finish in train dataset, time: 13.66s, loss: 0.3212 
+2023-03-04 16:25:29,659 INFO: file for evaluation: dev 
+2023-03-04 16:25:36,120 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:25:36,120 INFO:         0.4935,   0.6414,    0.6561, 0.6487,    0.9192 
+2023-03-04 16:25:36,120 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:25:36,120 INFO:         0.5364,   0.6918,    0.7048, 0.6983,    0.9403 
+2023-03-04 16:25:36,120 INFO: rec_at_1: 0.2094 
+2023-03-04 16:25:36,121 INFO: prec_at_1: 0.8608 
+2023-03-04 16:25:36,121 INFO: rec_at_5: 0.6495 
+2023-03-04 16:25:36,121 INFO: prec_at_5: 0.6535 
+2023-03-04 16:25:36,121 INFO: rec_at_8: 0.7829 
+2023-03-04 16:25:36,121 INFO: prec_at_8: 0.5264 
+2023-03-04 16:25:36,121 INFO: evaluation finish in dev dataset, time: 6.46s 
+2023-03-04 16:25:36,123 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:25:36,123 INFO: Epoch 49 
+2023-03-04 16:25:49,677 INFO: epoch finish in train dataset, time: 13.55s, loss: 0.3214 
+2023-03-04 16:25:49,678 INFO: file for evaluation: dev 
+2023-03-04 16:25:56,131 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:25:56,131 INFO:         0.4989,   0.6424,    0.6621, 0.6521,    0.9204 
+2023-03-04 16:25:56,132 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:25:56,132 INFO:         0.5391,   0.6934,    0.7077, 0.7005,    0.9397 
+2023-03-04 16:25:56,132 INFO: rec_at_1: 0.2108 
+2023-03-04 16:25:56,132 INFO: prec_at_1: 0.8620 
+2023-03-04 16:25:56,132 INFO: rec_at_5: 0.6457 
+2023-03-04 16:25:56,132 INFO: prec_at_5: 0.6515 
+2023-03-04 16:25:56,132 INFO: rec_at_8: 0.7817 
+2023-03-04 16:25:56,132 INFO: prec_at_8: 0.5278 
+2023-03-04 16:25:56,132 INFO: evaluation finish in dev dataset, time: 6.45s 
+2023-03-04 16:25:56,134 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:25:56,135 INFO: Epoch 50 
+2023-03-04 16:26:10,236 INFO: epoch finish in train dataset, time: 14.10s, loss: 0.3215 
+2023-03-04 16:26:10,236 INFO: file for evaluation: dev 
+2023-03-04 16:26:16,710 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:26:16,710 INFO:         0.5007,   0.6544,    0.6631, 0.6587,    0.9208 
+2023-03-04 16:26:16,710 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:26:16,710 INFO:         0.5448,   0.6966,    0.7143, 0.7054,    0.9404 
+2023-03-04 16:26:16,710 INFO: rec_at_1: 0.2129 
+2023-03-04 16:26:16,710 INFO: prec_at_1: 0.8703 
+2023-03-04 16:26:16,710 INFO: rec_at_5: 0.6466 
+2023-03-04 16:26:16,710 INFO: prec_at_5: 0.6523 
+2023-03-04 16:26:16,710 INFO: rec_at_8: 0.7842 
+2023-03-04 16:26:16,710 INFO: prec_at_8: 0.5294 
+2023-03-04 16:26:16,710 INFO: evaluation finish in dev dataset, time: 6.47s 
+2023-03-04 16:26:16,857 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:26:16,857 INFO: Epoch 51 
+2023-03-04 16:26:31,058 INFO: epoch finish in train dataset, time: 14.20s, loss: 0.3223 
+2023-03-04 16:26:31,058 INFO: file for evaluation: dev 
+2023-03-04 16:26:38,261 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:26:38,261 INFO:         0.5049,   0.6682,    0.6607, 0.6645,    0.9208 
+2023-03-04 16:26:38,261 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:26:38,261 INFO:         0.5490,   0.7043,    0.7135, 0.7088,    0.9424 
+2023-03-04 16:26:38,261 INFO: rec_at_1: 0.2162 
+2023-03-04 16:26:38,261 INFO: prec_at_1: 0.8716 
+2023-03-04 16:26:38,262 INFO: rec_at_5: 0.6544 
+2023-03-04 16:26:38,262 INFO: prec_at_5: 0.6576 
+2023-03-04 16:26:38,262 INFO: rec_at_8: 0.7899 
+2023-03-04 16:26:38,262 INFO: prec_at_8: 0.5323 
+2023-03-04 16:26:38,262 INFO: evaluation finish in dev dataset, time: 7.20s 
+2023-03-04 16:26:38,488 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:26:38,488 INFO: Epoch 52 
+2023-03-04 16:26:52,574 INFO: epoch finish in train dataset, time: 14.09s, loss: 0.3207 
+2023-03-04 16:26:52,575 INFO: file for evaluation: dev 
+2023-03-04 16:26:59,004 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:26:59,004 INFO:         0.5001,   0.6681,    0.6560, 0.6620,    0.9215 
+2023-03-04 16:26:59,005 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:26:59,005 INFO:         0.5422,   0.7024,    0.7040, 0.7032,    0.9408 
+2023-03-04 16:26:59,005 INFO: rec_at_1: 0.2114 
+2023-03-04 16:26:59,005 INFO: prec_at_1: 0.8640 
+2023-03-04 16:26:59,005 INFO: rec_at_5: 0.6516 
+2023-03-04 16:26:59,005 INFO: prec_at_5: 0.6572 
+2023-03-04 16:26:59,005 INFO: rec_at_8: 0.7903 
+2023-03-04 16:26:59,005 INFO: prec_at_8: 0.5306 
+2023-03-04 16:26:59,005 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:26:59,008 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:26:59,008 INFO: Epoch 53 
+2023-03-04 16:27:12,939 INFO: epoch finish in train dataset, time: 13.93s, loss: 0.3208 
+2023-03-04 16:27:12,939 INFO: file for evaluation: dev 
+2023-03-04 16:27:20,709 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:27:20,709 INFO:         0.5019,   0.6464,    0.6798, 0.6627,    0.9218 
+2023-03-04 16:27:20,710 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:27:20,710 INFO:         0.5429,   0.6860,    0.7224, 0.7037,    0.9411 
+2023-03-04 16:27:20,710 INFO: rec_at_1: 0.2161 
+2023-03-04 16:27:20,710 INFO: prec_at_1: 0.8716 
+2023-03-04 16:27:20,710 INFO: rec_at_5: 0.6464 
+2023-03-04 16:27:20,710 INFO: prec_at_5: 0.6511 
+2023-03-04 16:27:20,710 INFO: rec_at_8: 0.7835 
+2023-03-04 16:27:20,710 INFO: prec_at_8: 0.5280 
+2023-03-04 16:27:20,710 INFO: evaluation finish in dev dataset, time: 7.77s 
+2023-03-04 16:27:20,713 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:27:20,713 INFO: Epoch 54 
+2023-03-04 16:27:34,209 INFO: epoch finish in train dataset, time: 13.50s, loss: 0.3197 
+2023-03-04 16:27:34,210 INFO: file for evaluation: dev 
+2023-03-04 16:27:42,297 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:27:42,297 INFO:         0.5001,   0.6457,    0.6658, 0.6556,    0.9204 
+2023-03-04 16:27:42,297 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:27:42,297 INFO:         0.5388,   0.6899,    0.7110, 0.7003,    0.9416 
+2023-03-04 16:27:42,297 INFO: rec_at_1: 0.2129 
+2023-03-04 16:27:42,297 INFO: prec_at_1: 0.8589 
+2023-03-04 16:27:42,297 INFO: rec_at_5: 0.6483 
+2023-03-04 16:27:42,297 INFO: prec_at_5: 0.6528 
+2023-03-04 16:27:42,297 INFO: rec_at_8: 0.7837 
+2023-03-04 16:27:42,297 INFO: prec_at_8: 0.5283 
+2023-03-04 16:27:42,297 INFO: evaluation finish in dev dataset, time: 8.09s 
+2023-03-04 16:27:42,300 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:27:42,300 INFO: Epoch 55 
+2023-03-04 16:27:55,988 INFO: epoch finish in train dataset, time: 13.69s, loss: 0.3195 
+2023-03-04 16:27:55,988 INFO: file for evaluation: dev 
+2023-03-04 16:28:02,489 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:28:02,489 INFO:         0.5004,   0.6558,    0.6599, 0.6578,    0.9210 
+2023-03-04 16:28:02,489 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:28:02,489 INFO:         0.5409,   0.6928,    0.7115, 0.7020,    0.9411 
+2023-03-04 16:28:02,490 INFO: rec_at_1: 0.2139 
+2023-03-04 16:28:02,490 INFO: prec_at_1: 0.8678 
+2023-03-04 16:28:02,490 INFO: rec_at_5: 0.6501 
+2023-03-04 16:28:02,490 INFO: prec_at_5: 0.6556 
+2023-03-04 16:28:02,490 INFO: rec_at_8: 0.7883 
+2023-03-04 16:28:02,490 INFO: prec_at_8: 0.5321 
+2023-03-04 16:28:02,490 INFO: evaluation finish in dev dataset, time: 6.50s 
+2023-03-04 16:28:02,492 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:28:02,492 INFO: Epoch 56 
+2023-03-04 16:28:16,414 INFO: epoch finish in train dataset, time: 13.92s, loss: 0.3194 
+2023-03-04 16:28:16,414 INFO: file for evaluation: dev 
+2023-03-04 16:28:22,919 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:28:22,919 INFO:         0.4938,   0.6497,    0.6627, 0.6561,    0.9207 
+2023-03-04 16:28:22,919 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:28:22,919 INFO:         0.5341,   0.6870,    0.7059, 0.6963,    0.9405 
+2023-03-04 16:28:22,920 INFO: rec_at_1: 0.2090 
+2023-03-04 16:28:22,920 INFO: prec_at_1: 0.8544 
+2023-03-04 16:28:22,920 INFO: rec_at_5: 0.6453 
+2023-03-04 16:28:22,920 INFO: prec_at_5: 0.6487 
+2023-03-04 16:28:22,920 INFO: rec_at_8: 0.7862 
+2023-03-04 16:28:22,920 INFO: prec_at_8: 0.5277 
+2023-03-04 16:28:22,920 INFO: evaluation finish in dev dataset, time: 6.51s 
+2023-03-04 16:28:22,922 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:28:22,923 INFO: Epoch 57 
+2023-03-04 16:28:36,771 INFO: epoch finish in train dataset, time: 13.85s, loss: 0.3190 
+2023-03-04 16:28:36,771 INFO: file for evaluation: dev 
+2023-03-04 16:28:43,197 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:28:43,197 INFO:         0.5036,   0.6613,    0.6612, 0.6612,    0.9213 
+2023-03-04 16:28:43,197 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:28:43,198 INFO:         0.5435,   0.6966,    0.7121, 0.7042,    0.9423 
+2023-03-04 16:28:43,198 INFO: rec_at_1: 0.2136 
+2023-03-04 16:28:43,198 INFO: prec_at_1: 0.8690 
+2023-03-04 16:28:43,198 INFO: rec_at_5: 0.6489 
+2023-03-04 16:28:43,198 INFO: prec_at_5: 0.6545 
+2023-03-04 16:28:43,198 INFO: rec_at_8: 0.7871 
+2023-03-04 16:28:43,198 INFO: prec_at_8: 0.5302 
+2023-03-04 16:28:43,198 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:28:43,201 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:28:43,201 INFO: Epoch 58 
+2023-03-04 16:28:56,923 INFO: epoch finish in train dataset, time: 13.72s, loss: 0.3196 
+2023-03-04 16:28:56,923 INFO: file for evaluation: dev 
+2023-03-04 16:29:03,366 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:29:03,367 INFO:         0.4832,   0.6635,    0.6354, 0.6492,    0.9205 
+2023-03-04 16:29:03,367 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:29:03,367 INFO:         0.5321,   0.7054,    0.6842, 0.6946,    0.9391 
+2023-03-04 16:29:03,367 INFO: rec_at_1: 0.2101 
+2023-03-04 16:29:03,367 INFO: prec_at_1: 0.8506 
+2023-03-04 16:29:03,367 INFO: rec_at_5: 0.6415 
+2023-03-04 16:29:03,367 INFO: prec_at_5: 0.6467 
+2023-03-04 16:29:03,367 INFO: rec_at_8: 0.7822 
+2023-03-04 16:29:03,367 INFO: prec_at_8: 0.5265 
+2023-03-04 16:29:03,367 INFO: evaluation finish in dev dataset, time: 6.44s 
+2023-03-04 16:29:03,370 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:29:03,370 INFO: Epoch 59 
+2023-03-04 16:29:16,704 INFO: epoch finish in train dataset, time: 13.33s, loss: 0.3192 
+2023-03-04 16:29:16,704 INFO: file for evaluation: dev 
+2023-03-04 16:29:23,137 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:29:23,138 INFO:         0.4990,   0.6607,    0.6623, 0.6615,    0.9213 
+2023-03-04 16:29:23,138 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:29:23,138 INFO:         0.5408,   0.6939,    0.7102, 0.7020,    0.9406 
+2023-03-04 16:29:23,138 INFO: rec_at_1: 0.2108 
+2023-03-04 16:29:23,138 INFO: prec_at_1: 0.8570 
+2023-03-04 16:29:23,138 INFO: rec_at_5: 0.6521 
+2023-03-04 16:29:23,138 INFO: prec_at_5: 0.6561 
+2023-03-04 16:29:23,138 INFO: rec_at_8: 0.7862 
+2023-03-04 16:29:23,138 INFO: prec_at_8: 0.5283 
+2023-03-04 16:29:23,138 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:29:23,141 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:29:23,141 INFO: Epoch 60 
+2023-03-04 16:29:36,571 INFO: epoch finish in train dataset, time: 13.43s, loss: 0.3178 
+2023-03-04 16:29:36,571 INFO: file for evaluation: dev 
+2023-03-04 16:29:42,998 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:29:42,999 INFO:         0.4962,   0.6537,    0.6567, 0.6551,    0.9228 
+2023-03-04 16:29:42,999 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:29:42,999 INFO:         0.5366,   0.6997,    0.6971, 0.6984,    0.9417 
+2023-03-04 16:29:42,999 INFO: rec_at_1: 0.2110 
+2023-03-04 16:29:42,999 INFO: prec_at_1: 0.8538 
+2023-03-04 16:29:42,999 INFO: rec_at_5: 0.6513 
+2023-03-04 16:29:42,999 INFO: prec_at_5: 0.6539 
+2023-03-04 16:29:42,999 INFO: rec_at_8: 0.7854 
+2023-03-04 16:29:42,999 INFO: prec_at_8: 0.5292 
+2023-03-04 16:29:42,999 INFO: evaluation finish in dev dataset, time: 6.43s 
+2023-03-04 16:29:43,002 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:29:43,002 INFO: Epoch 61 
+2023-03-04 16:29:57,223 INFO: epoch finish in train dataset, time: 14.22s, loss: 0.3179 
+2023-03-04 16:29:57,223 INFO: file for evaluation: dev 
+2023-03-04 16:30:03,689 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:03,689 INFO:         0.5024,   0.6582,    0.6598, 0.6590,    0.9221 
+2023-03-04 16:30:03,690 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:03,690 INFO:         0.5423,   0.6941,    0.7126, 0.7032,    0.9410 
+2023-03-04 16:30:03,690 INFO: rec_at_1: 0.2138 
+2023-03-04 16:30:03,690 INFO: prec_at_1: 0.8652 
+2023-03-04 16:30:03,690 INFO: rec_at_5: 0.6482 
+2023-03-04 16:30:03,690 INFO: prec_at_5: 0.6511 
+2023-03-04 16:30:03,690 INFO: rec_at_8: 0.7869 
+2023-03-04 16:30:03,690 INFO: prec_at_8: 0.5283 
+2023-03-04 16:30:03,690 INFO: evaluation finish in dev dataset, time: 6.47s 
+2023-03-04 16:30:03,693 INFO: saved metrics, params, model to directory ./results/models/MVCLA_ACG_Mar_04_16_08_04_seed_1
+ 
+2023-03-04 16:30:03,693 INFO: Epoch 62 
+2023-03-04 16:30:17,398 INFO: epoch finish in train dataset, time: 13.71s, loss: 0.3194 
+2023-03-04 16:30:17,399 INFO: file for evaluation: dev 
+2023-03-04 16:30:24,048 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:24,048 INFO:         0.5010,   0.6553,    0.6516, 0.6534,    0.9222 
+2023-03-04 16:30:24,048 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:24,049 INFO:         0.5418,   0.7062,    0.6996, 0.7029,    0.9414 
+2023-03-04 16:30:24,049 INFO: rec_at_1: 0.2127 
+2023-03-04 16:30:24,049 INFO: prec_at_1: 0.8614 
+2023-03-04 16:30:24,049 INFO: rec_at_5: 0.6480 
+2023-03-04 16:30:24,049 INFO: prec_at_5: 0.6535 
+2023-03-04 16:30:24,049 INFO: rec_at_8: 0.7905 
+2023-03-04 16:30:24,049 INFO: prec_at_8: 0.5304 
+2023-03-04 16:30:24,049 INFO: evaluation finish in dev dataset, time: 6.65s 
+2023-03-04 16:30:24,049 INFO: f1_micro hasn't improved in 10 epochs, early stopping... 
+2023-03-04 16:30:24,049 INFO: Loading the best model in dev dataset ... 
+2023-03-04 16:30:29,589 INFO: The best result in dev dataset: 
+2023-03-04 16:30:29,589 INFO: file for evaluation: dev 
+2023-03-04 16:30:36,339 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:36,339 INFO:         0.5049,   0.6682,    0.6607, 0.6645,    0.9208 
+2023-03-04 16:30:36,339 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:36,339 INFO:         0.5490,   0.7043,    0.7135, 0.7088,    0.9424 
+2023-03-04 16:30:36,339 INFO: rec_at_1: 0.2162 
+2023-03-04 16:30:36,340 INFO: prec_at_1: 0.8716 
+2023-03-04 16:30:36,340 INFO: rec_at_5: 0.6544 
+2023-03-04 16:30:36,340 INFO: prec_at_5: 0.6576 
+2023-03-04 16:30:36,340 INFO: rec_at_8: 0.7899 
+2023-03-04 16:30:36,340 INFO: prec_at_8: 0.5323 
+2023-03-04 16:30:36,340 INFO: The best result in test dataset: 
+2023-03-04 16:30:36,340 INFO: file for evaluation: test 
+2023-03-04 16:30:46,910 INFO: [MACRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:46,910 INFO:         0.4965,   0.6585,    0.6593, 0.6589,    0.9194 
+2023-03-04 16:30:46,910 INFO: [MICRO] accuracy, precision, recall, f-measure, AUC 
+2023-03-04 16:30:46,911 INFO:         0.5424,   0.6938,    0.7131, 0.7033,    0.9411 
+2023-03-04 16:30:46,911 INFO: rec_at_1: 0.2114 
+2023-03-04 16:30:46,911 INFO: prec_at_1: 0.8745 
+2023-03-04 16:30:46,911 INFO: rec_at_5: 0.6354 
+2023-03-04 16:30:46,911 INFO: prec_at_5: 0.6537 
+2023-03-04 16:30:46,911 INFO: rec_at_8: 0.7803 
+2023-03-04 16:30:46,911 INFO: prec_at_8: 0.5381 
