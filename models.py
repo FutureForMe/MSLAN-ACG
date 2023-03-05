@@ -219,9 +219,9 @@ class ResidualBlock(nn.Module):
         return out
 
 
-class MVCLA_ACG(nn.Module):
+class MSLAN_ACG(nn.Module):
     def __init__(self, args, dicts):
-        super(MVCLA_ACG, self).__init__()
+        super(MSLAN_ACG, self).__init__()
         self.word_rep = WordRep(args, dicts)
         self.class_nums = args.class_nums
         self.encoders = nn.ModuleList()
